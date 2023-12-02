@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './components/Home/Home.jsx';
 import Menu from './components/Home/Menu/Menu.jsx';
 import About from './components/About/About.jsx';
+import Reservation from './components/Reservation/Reservation.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,11 +19,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/menu',
-        element: <Menu />
+        element: <Menu />,
+        loader: () => fetch('https://www.themealdb.com/api/json/v1/1/random.php')
       },
       {
         path: '/about us',
         element: <About />
+      },
+      {
+        path: '/',
+        element: <Reservation />
       },
     ]
   },

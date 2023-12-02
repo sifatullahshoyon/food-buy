@@ -1,11 +1,19 @@
 import React from 'react';
-import Header from '../Header/Header';
+// import Header from '../Header/Header';
+import Reservation from '../Reservation/Reservation';
+
 
 
 const Home = () => {
     return (
         <div>
-            <Header />
+            {/* Start Header */}
+                {/* <Header /> */}
+            {/* End Header */}
+
+            {/* Start Reservation Section */}
+                <Reservation />
+            {/* End Reservation Section */}
         </div>
     );
 };
