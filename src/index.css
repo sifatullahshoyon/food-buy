@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    @apply font-lato font-bold text-lg tracking-wide text-brown transition-colors duration-200
+}
+
+.default{
+    @apply font-medium tracking-wide text-white transition-colors duration-200 hover:font-bold
+  }
