@@ -7,6 +7,7 @@ import Home from './components/Home/Home.jsx';
 import Menu from './components/Home/Menu/Menu.jsx';
 import About from './components/About/About.jsx';
 import Reservation from './components/Reservation/Reservation.jsx';
+import OnlineReservation from './components/Online Reservation/OnlineReservation.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Reservation />
+      },
+      {
+        path: '/',
+        element: <OnlineReservation />
       },
     ]
   },
