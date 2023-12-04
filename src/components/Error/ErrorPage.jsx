@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 const ErrorPage = () => {
   return (
     <>
-      <div class="grid h-screen place-content-center bg-orange-100 px-4">
-        <div class="text-center">
+      <div className="grid h-screen place-content-center bg-orange-100 px-4">
+        <div className="text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1024 768"
-            class="mx-auto h-56 w-auto text-black sm:h-64"
+            className="mx-auto h-56 w-auto text-black sm:h-64"
           >
             <g fill="none" fill-rule="evenodd">
               <g fill="#FF5678">
@@ -24,10 +24,10 @@ const ErrorPage = () => {
               </g>
             </g>
           </svg>
-          <h1 class="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl font-lato">
+          <h1 className="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl font-lato">
             Uh-oh!
           </h1>
-          <p class="mt-4 text-gray-500 font-lato font-bold">We can't find that page.</p>
+          <p className="mt-4 text-gray-500 font-lato font-bold">We can't find that page.</p>
           <Link to='/'>
           <button className="my-5 btn btn-wide bg-orange-400 hover:bg-orange-500">Back To Home Page</button>
           </Link>

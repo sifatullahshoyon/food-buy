@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="container mx-auto">
-      <div className="navbar bg-transparent p-5">
+      <div className="navbar bg-transparent p-5 fixed top-0 right-0 left-0">
         <div className="flex-1">
           <Link to="/">
             <h3 className="text-2xl font-lato font-bold text-white">food<span className="text-brown">Buy</span></h3>

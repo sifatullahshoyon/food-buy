@@ -9,6 +9,7 @@ import About from './components/About/About.jsx';
 import Reservation from './components/Reservation/Reservation.jsx';
 import OnlineReservation from './components/Online Reservation/OnlineReservation.jsx';
 import ErrorPage from './components/Error/ErrorPage.jsx';
+import MenuDetails from './components/Menu/MenuDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <OnlineReservation />
+      },
+      {
+        path: '/menu/:idMeal',
+        element: <MenuDetails />,
+        loader : ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.idMeal}`)
       },
     ]
   },

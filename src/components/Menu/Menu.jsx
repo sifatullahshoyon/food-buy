@@ -7,18 +7,19 @@ const Menu = () => {
   const navigation = useNavigation();
   const [showAll, setShowAll] = useState(false);
   const itemShowAll = showAll ? meals?.meals : meals?.meals.slice(0, 6);
- 
+
   const handleSeeAll = () => {
     setShowAll(true);
   };
 
-  if(navigation.state === 'loading'){
-    return <div>
+  if (navigation.state === "loading") {
+    return (
+      <div className="flex items-center justify-center mt-96 mb-32">
         <span className="loading loading-bars loading-lg text-success"></span>
-    </div>
+      </div>
+    );
   }
 
-  console.log(meals);
   return (
     <div className="my-28">
       <div className="container mx-auto p-5">
@@ -33,7 +34,10 @@ const Menu = () => {
           </div>
           <div className="text-center my-8">
             {!showAll && (
-              <button onClick={handleSeeAll} className="btn btn-wide bg-brown hover:bg-orange-400 hover:border-none border-none font-lato font-bold text-black">
+              <button
+                onClick={handleSeeAll}
+                className="btn btn-wide bg-brown hover:bg-orange-400 hover:border-none border-none font-lato font-bold text-black"
+              >
                 See All
               </button>
             )}

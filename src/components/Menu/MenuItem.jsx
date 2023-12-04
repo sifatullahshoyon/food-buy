@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MenuItem = ({ meal }) => {
-  console.log(meal);
   const { idMeal, strMeal, strMealThumb, strInstructions, strCategory } = meal;
+  
   return (
     <div>
       <div className="card bg-base-100 shadow-xl">
@@ -26,9 +27,11 @@ const MenuItem = ({ meal }) => {
             ....
           </p>
           <div className="card-actions justify-start">
-            <button className="btn btn-primary bg-brown border-none hover:bg-orange-400 hover:border-none text-black font-lato">
-              View Details
-            </button>
+            <Link to={`/menu/${idMeal}`}>
+                <button className="btn btn-primary bg-brown border-none hover:bg-orange-400 hover:border-none text-black font-lato">
+                View Details
+                </button>
+            </Link>
           </div>
         </div>
       </div>
